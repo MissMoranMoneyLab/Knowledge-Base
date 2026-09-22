@@ -1,0 +1,89 @@
+<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>דוח התקדמות #1 | המעבדה לחקר הכסף</title><style>
+:root{--bg:#fbfcfd;--ink:#273444;--muted:#6b7280;--road:#3f444b;--road-edge:#9aafc1;--line:#fff;--panel:#fff;--tile:#f1f3f4;--active:#e2e4e7;--blue:#4285f4;--border:#e5e7eb;--shadow:0 10px 28px rgba(31,41,55,.07)}*{box-sizing:border-box}body{margin:0;font-family:Aharoni,Arial,"Noto Sans Hebrew",sans-serif;background:var(--bg);color:var(--ink)}main{max-width:1440px;margin:auto;padding:24px 28px 50px}.brand{display:flex;justify-content:flex-start;align-items:center;gap:14px;margin:0 0 22px;font-size:19px}.brand strong{font-size:24px}.brand span{color:#536273}.layout{display:grid;grid-template-columns:minmax(500px,1.18fr) minmax(520px,1fr);gap:34px;direction:ltr;align-items:start}.track-wrap{direction:rtl;position:relative;min-height:860px;overflow:hidden}.road-svg{width:100%;height:860px;display:block}.checkpoint{display:none}.checkpoint.active{transform:scale(1.18)}.cp0{left:73%;bottom:32px;background:#ff6b6b}.cp1{left:28%;bottom:150px;background:#4285f4}.cp2{left:66%;bottom:252px;background:#42c7b5}.cp3{left:82%;bottom:350px;background:#f8b735}.cp4{left:65%;bottom:447px;background:#7e57c2}.cp5{left:8%;bottom:575px;background:#27b4c5}.cp6{left:77%;top:23px;background:#4285f4}.car{position:absolute;left:78%;bottom:29px;width:72px;height:36px;z-index:5;transition:all .7s cubic-bezier(.2,.8,.2,1)}.car svg{width:100%;height:100%;display:block;transform:scaleX(-1)}.finish{position:absolute;left:84.5%;top:0;width:46px;height:58px;z-index:4}.finish svg{width:100%;height:100%;display:block}.ui{direction:ltr;display:grid;grid-template-columns:minmax(0,1fr) 175px;gap:18px}.card{direction:rtl;text-align:right;background:var(--panel);border:1px solid #edf0f2;border-radius:16px;padding:30px;box-shadow:var(--shadow);min-height:600px}.card h1{font-size:31px;margin:0 0 12px;line-height:1.2}.card p{font-family:Arial,"Noto Sans Hebrew",sans-serif;font-size:17px;line-height:1.55;margin:0 0 18px;color:#455468}.nav{direction:rtl;display:flex;flex-direction:column;gap:12px}.nav-item{min-height:74px;border-radius:13px;background:var(--tile);display:flex;align-items:center;justify-content:flex-start;gap:10px;padding:0 18px;font-size:20px;font-weight:700;cursor:pointer;text-align:right}.nav-item.active{background:var(--active)}.nav-dot{width:4px;height:4px;border-radius:50%;flex:0 0 4px}.choices{display:grid;gap:10px;margin:18px 0}.choice{border:0;background:#f3f4f5;border-radius:10px;padding:14px 16px;cursor:pointer;text-align:right;font-size:17px;color:#344154}.choice.selected{background:#e7edf8;outline:1px solid #b8cef5}.field{width:100%;border:1px solid #cbd5e1;border-radius:10px;padding:14px;font:16px Arial,"Noto Sans Hebrew",sans-serif;background:#fff}.textarea{min-height:105px;resize:vertical;margin-top:10px}.prompt{margin-top:22px;padding-top:18px;border-top:1px solid #e4e8ed}.prompt b{display:block;font-size:17px;margin-bottom:8px}.actions{display:flex;justify-content:flex-start;gap:10px;margin-top:20px}.btn{border:0;border-radius:9px;background:var(--blue);color:#fff;padding:13px 28px;font-weight:700;font-size:18px;cursor:pointer;min-width:120px}.btn.secondary{background:#eceff1;color:#4b5563}.summary-block{margin-top:24px;padding-top:20px;border-top:1px solid #e4e8ed}
+.summary-title{display:flex;align-items:center;gap:9px;margin:0 0 13px;font:21px Arial,"Noto Sans Hebrew",sans-serif;font-weight:400;color:#273444}
+.summary-title .celebrate{font-size:24px;line-height:1}
+.summary{display:grid;gap:10px}
+.summary div{border-radius:10px;padding:14px 16px;display:grid;grid-template-columns:82px 1fr;align-items:center;gap:10px;font-family:Arial,"Noto Sans Hebrew",sans-serif}.summary div:nth-child(1){background:#edf4ff}.summary div:nth-child(2){background:#edf9f6}.summary div:nth-child(3){background:#fff5e5}
+.summary-label{font-size:14px;font-weight:400;color:#64748b}
+.summary-value{font-size:17px;font-weight:400;color:#273444}.required-note{min-height:20px;margin-top:7px;font:14px Arial,"Noto Sans Hebrew",sans-serif;color:#b42318}.success{text-align:center;padding:50px 15px}.tiny{font:14px Arial,sans-serif;color:#6b7280;margin-top:18px!important}@media(max-width:980px){main{padding:18px 14px}.brand{justify-content:center}.layout{grid-template-columns:1fr;direction:rtl}.track-wrap{min-height:410px}.road-svg{height:410px}.ui{grid-template-columns:1fr}.nav{order:-1;display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.nav-item{min-height:46px;padding:0 9px;font-size:14px}.checkpoint{transform:scale(.9)}.cp0{left:82.9%;bottom:21px}.cp1{left:33.6%;bottom:83px}.cp2{left:75.7%;bottom:138px}.cp3{left:92.9%;bottom:191px}.cp4{left:73.6%;bottom:239px}.cp5{left:10.7%;bottom:291px}.cp6{left:87.1%;top:5px}.car{width:48px;height:26px;left:78%;bottom:12px}.finish{left:84.5%;top:-1px;width:32px;height:40px}.card{min-height:auto;padding:22px}.card h1{font-size:26px}}
+
+<style>
+.track-stop{stroke:#fff;stroke-width:5}
+</style>
+<style>
+.multi-helper{
+  font-size:13px;
+  color:#6f7884;
+  margin:4px 0 10px;
+  font-weight:600;
+}
+.actions{
+  position:sticky;
+  bottom:0;
+  z-index:20;
+  background:linear-gradient(to top,#fff 72%,rgba(255,255,255,.92));
+  padding:14px 0 4px;
+  margin-top:14px;
+}
+.required-note{
+  min-height:18px;
+  margin-top:6px;
+  font-size:13px;
+  color:#b42318;
+}
+</style>
+
+</style></head><body><main><div class="brand"><strong>המעבדה לחקר הכסף</strong><span>|</span><span>דוח התקדמות #1</span></div><div class="layout"><section class="track-wrap"><svg class="road-svg" viewBox="0 0 700 860" preserveAspectRatio="none"><path d="M650 805 L430 805 C300 820 235 755 235 685 C235 610 300 570 405 570 L535 570 C620 570 650 520 650 460 C650 395 605 350 515 350 L210 350 C120 350 75 315 75 250 C75 180 130 135 225 135 L470 135 C565 135 610 90 610 20" fill="none" stroke="var(--road-edge)" stroke-width="92" stroke-linecap="round" stroke-linejoin="round"/><path d="M650 805 L430 805 C300 820 235 755 235 685 C235 610 300 570 405 570 L535 570 C620 570 650 520 650 460 C650 395 605 350 515 350 L210 350 C120 350 75 315 75 250 C75 180 130 135 225 135 L470 135 C565 135 610 90 610 20" fill="none" stroke="var(--road)" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/><path d="M650 805 L430 805 C300 820 235 755 235 685 C235 610 300 570 405 570 L535 570 C620 570 650 520 650 460 C650 395 605 350 515 350 L210 350 C120 350 75 315 75 250 C75 180 130 135 225 135 L470 135 C565 135 610 90 610 20" fill="none" stroke="white" stroke-width="4" stroke-dasharray="18 18" stroke-linecap="round"/>
+<g aria-hidden="true">
+  <circle class="track-stop" cx="520" cy="805" r="14" fill="#ff6b6b"/>
+  <circle class="track-stop" cx="235" cy="685" r="14" fill="#4285f4"/>
+  <circle class="track-stop" cx="405" cy="570" r="14" fill="#42c7b5"/>
+  <circle class="track-stop" cx="650" cy="460" r="14" fill="#f8b735"/>
+  <circle class="track-stop" cx="420" cy="350" r="14" fill="#7e57c2"/>
+  <circle class="track-stop" cx="75" cy="250" r="14" fill="#27b4c5"/>
+  <circle class="track-stop" cx="430" cy="135" r="14" fill="#4285f4"/>
+</g>
+</svg><div class="checkpoint cp0 active"></div><div class="checkpoint cp1"></div><div class="checkpoint cp2"></div><div class="checkpoint cp3"></div><div class="checkpoint cp4"></div><div class="checkpoint cp5"></div><div class="checkpoint cp6"></div><div class="finish" aria-label="קו הסיום"><svg viewBox="0 0 46 58" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 3v52" stroke="#273444" stroke-width="3" stroke-linecap="round"/>
+<path d="M10 5h30v28H10z" fill="#fff" stroke="#273444" stroke-width="1.5"/>
+<path d="M10 5h7.5v7H10zm15 0h7.5v7H25zm7.5 7H40v7h-7.5zM17.5 12H25v7h-7.5zM10 19h7.5v7H10zm15 0h7.5v7H25zm7.5 7H40v7h-7.5zM17.5 26H25v7h-7.5z" fill="#273444"/>
+</svg></div><div class="car" id="car"><svg viewBox="0 0 120 60" aria-label="מכונית"><g fill="#4285f4"><path d="M16 27h10l14-14h36l18 14h10c7 0 12 6 12 13v7H6v-8c0-7 4-12 10-12z"/><rect x="18" y="27" width="80" height="22" rx="7"/></g><path d="M43 16h15v11H32zM62 16h13l14 11H62z" fill="#fff"/><circle cx="31" cy="48" r="10" fill="#fff" stroke="#4285f4" stroke-width="5"/><circle cx="91" cy="48" r="10" fill="#fff" stroke="#4285f4" stroke-width="5"/></svg></div></section><section class="ui"><div class="card" id="card"></div><nav class="nav" id="nav"></nav></section></div></main><script>
+const ENDPOINT='https://script.google.com/macros/s/AKfycbyaLP4xQcHaFz5dwqvCNSjavvZp2BMoq5-_De2SltP5akYsQ6DOqyycxD0ceYdbd2RqLQ/exec';
+const labels=['יעד','בחירה','תהליך','חסמים','זמן','חוויה','סיכום'], colors=['#4285f4','#27b4c5','#f8b735','#42c7b5','#ff6b6b','#4aa3f8','#7e57c2'];
+const data={name:'',status:'',platform:'',considerations:[],main_consideration:'',blockers:[],actual_time:'',almost_postponed:'',almost_why:'',what_helped_continue:'',unclear:'',guide_effect:'',feeling:'',change_next:''};let step=0;let submitted=false;
+const carPos=[['78%','29px'],['29%','160px'],['72%','275px'],['88%','385px'],['69%','485px'],['7%','595px'],['82%','795px']];
+function nav(){document.getElementById('nav').innerHTML=labels.map((x,i)=>`<div class="nav-item ${i===step?'active':''}" ${submitted?'':`onclick="${i<=step?'move('+i+')':''}"`} style="${submitted?'cursor:default;pointer-events:none;':''}"><span class="nav-dot" style="background:${colors[i]}"></span>${x}</div>`).join('')}
+function move(n){step=n;nav();document.querySelectorAll('.checkpoint').forEach((x,i)=>x.classList.toggle('active',i===n));const c=document.getElementById('car');c.style.left=carPos[n][0];c.style.bottom=carPos[n][1];render()}
+function choices(name,items,multi=false){return `<div class="choices">${items.map(x=>`<button class="choice" data-name="${name}" data-val="${x}" data-multi="${multi}">${x}</button>`).join('')}</div>`}
+function textPrompt(ph){return `<div class="prompt"><b>מה עוד תרצי לשתף?</b><textarea class="field textarea free" placeholder="${ph||'כתבי כאן כל מה שחשוב לך...'}"></textarea></div>`}
+function render(){const c=document.getElementById('card');if(step===0)c.innerHTML=`<h1>היעד השבועי: פתיחת חשבון</h1><p>השבוע המטרה הייתה לעשות את הצעד הראשון בפועל ולפתוח חשבון השקעות, או לפחות להתקדם בתהליך הפתיחה. מה מתאר הכי טוב את המצב שלך היום?</p>${choices('status',['עוד לא התחלתי','אני תקועה / עדיין בשלבי התלבטות','התחלתי בתהליך','שלחתי בקשה לפתיחת חשבון','פתחתי חשבון'])}${textPrompt('ספרי לי קצת יותר על איפה את נמצאת כרגע...')}<div class="actions"><button class="btn" onclick="saveFree('guide_effect'); if(data.status) move(1)">הבא</button></div>`;
+if(step===1)c.innerHTML=`<h1>איפה בחרת לפתוח?</h1><p>כתבי איפה בחרת לפתוח את החשבון ומה היו השיקולים שלך. אם עוד לא בחרת, כתבי בין מה למה את מתלבטת.</p><input id="platform" class="field" placeholder="שם הפלטפורמה / הגוף" value="${data.platform||''}"><div id="platform-required" class="required-note"></div><div class="multi-helper">אפשר לבחור יותר מתשובה אחת</div>${choices('considerations',['נוחות','עברית','סכום מינימום','עמלות','המרת מט״ח','טיפול במס','שווקים בחו״ל','מישהו שאני סומכת עליו','אחר'],true)}${textPrompt('מה היה השיקול הכי משמעותי עבורך ולמה?')}<div class="actions"><button class="btn" onclick="const p=q('#platform').value.trim(); if(!p){q('#platform-required').textContent='שם הפלטפורמה הוא שדה חובה'; q('#platform').focus(); return;} data.platform=p; data.main_consideration=q('.free').value.trim(); move(2)">הבא</button></div>`;
+if(step===2)c.innerHTML=`<h1>תהליך</h1><p>מה קרה בפועל מהרגע שהחלטת להתחיל ועד לנקודה שבה את נמצאת עכשיו?</p>${choices('almost_postponed',['עשיתי ברצף','עצרתי וחזרתי','דחיתי וחזרתי','עדיין לא התחלתי'])}${textPrompt('ספרי לי בקצרה איך נראה התהליך שלך...')}<div class="actions"><button class="btn" onclick="saveFree('almost_why'); move(3)">הבא</button></div>`;
+if(step===3)c.innerHTML=`<h1>חסמים</h1><p>מה עצר אותך, בלבל אותך או גרם לך להתלבט בדרך? אפשר לבחור יותר מאפשרות אחת.</p>${choices('blockers',['לא ידעתי במה לבחור','עמלות','סכום מינימום','לא היה לי זמן','פחדתי לעשות טעות','משהו בתהליך לא היה ברור','לא נתקלתי בחסם'],true)}${textPrompt('מה בדיוק קרה בנקודה שבה נעצרת או התלבטת?')}<div class="actions"><button class="btn" onclick="saveFree('unclear'); move(4)">הבא</button></div>`;
+if(step===4)c.innerHTML=`<h1>זמן</h1><p>כמה זמן לקח לך בפועל להתקדם במשימה השבוע?</p>${choices('actual_time',['עד 10 דקות','10–30 דקות','30–60 דקות','יותר משעה'])}${textPrompt('הזמן היה כמו שציפית? מה הפתיע אותך?')}<div class="actions"><button class="btn" onclick="saveFree('what_helped_continue'); if(data.actual_time) move(5)">הבא</button></div>`;
+if(step===5)c.innerHTML=`<h1>חוויה</h1><p>איך הרגיש לך לעבור את המשימה הזאת?</p>${choices('feeling_tag',['קל יותר ממה שחשבתי','בסדר, אבל דרש ממני מאמץ','מבלבל','מלחיץ','מספק','אחר'])}${textPrompt('במילים שלך: איך היה לך? מה עזר לך להתקדם ומה פחות?')}<div id="feeling-error" class="required-note"></div><div class="actions"><button class="btn" onclick="nextFromExperience()">הבא</button></div>`;
+if(step===6)c.innerHTML=`<h1>סיכום</h1><p>רגע לפני ששולחות למעבדה, יש דבר אחד שהיית משנה במדריך לפני שאני שולחת אותו לקבוצה הבאה?</p><textarea id="change" class="field textarea" placeholder="כתבי כאן. גם אם התשובה היא 'לא הייתי משנה כלום', זה דאטה מבחינתי."></textarea><div class="summary-block"><div class="summary-title"><span class="celebrate">🎉</span><span>המסלול שלי השבוע</span></div><div class="summary"><div><span class="summary-label">התקדמות</span><span class="summary-value">${data.status||'לא צוין'}</span></div><div><span class="summary-label">פלטפורמה</span><span class="summary-value">${data.platform||'לא צוין'}</span></div><div><span class="summary-label">זמן בפועל</span><span class="summary-value">${data.actual_time||'לא צוין'}</span></div></div></div><p class="tiny">הדוח הוא חלק מההשתתפות בפיילוט. גם אם לא השלמת את המשימה, מה שקרה בדרך חשוב למחקר.</p><div class="actions"><button class="btn" onclick="finish()">שלחי למעבדה</button></div>`;bind()}
+function nextFromExperience(){const e=q('.free'),v=e?e.value.trim():'';const err=q('#feeling-error');if(!v){if(err)err.textContent='כדי להמשיך, כתבי כאן לפחות כמה מילים על החוויה שלך.';if(e)e.focus();return}data.feeling=v;if(err)err.textContent='';move(6)}
+function q(s){return document.querySelector(s)} function saveFree(k){const e=q('.free');if(e)data[k]=e.value.trim()}
+function bind(){document.querySelectorAll('.choice').forEach(b=>b.onclick=()=>{const k=b.dataset.name,v=b.dataset.val,m=b.dataset.multi==='true';if(m){data[k]=data[k]||[];const i=data[k].indexOf(v);i>=0?data[k].splice(i,1):data[k].push(v);b.classList.toggle('selected')}else{data[k]=v;document.querySelectorAll(`[data-name="${k}"]`).forEach(x=>x.classList.remove('selected'));b.classList.add('selected')}})}
+async function finish(){
+  data.change_next=q('#change').value.trim();
+  data.submission_id='R1-'+Date.now()+'-'+Math.random().toString(36).slice(2,8);
+  const c=q('#card');
+  c.innerHTML=`<div class="success"><h1>שולחת למעבדה...</h1><p>עוד רגע מסיימות.</p></div>`;
+  try{
+    const payload=new URLSearchParams();
+    payload.set('payload',JSON.stringify(data));
+    await fetch(ENDPOINT,{
+      method:'POST',
+      mode:'no-cors',
+      headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},
+      body:payload.toString()
+    });
+    submitted=true;nav();c.innerHTML=`<div class="success"><h1>הדוח נשלח ✓</h1><p>תודה. הדוח שלך נשלח למעבדה.</p><p class="tiny">מזהה שליחה: ${data.submission_id}</p></div>`;
+  }catch(e){
+    c.innerHTML=`<div class="success"><h1>השליחה לא הצליחה</h1><p>נסי לרענן ולשלוח שוב.</p></div>`;
+  }
+}
+move(0);
+</script></body></html>

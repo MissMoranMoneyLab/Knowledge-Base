@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>מתי הכסף מתחיל לעשות יותר ממני?</title>
+<style>
+:root{--ink:#202124;--muted:#6f7378;--paper:#ffffff;--card:#fff;--blue:#bcd6ec;--pink:#f2b5c7;--yellow:#f4d56d;--green:#bcdcc8;--purple:#d6c4e8;--accent:#246ca6}
+*{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font-family:Aharoni,"Arial Hebrew",Arial,sans-serif}
+.wrap{max-width:1180px;margin:auto;padding:34px 24px 60px}.eyebrow{font-size:14px;font-weight:700}.hero{display:block;margin-top:18px;width:100%}
+h1{font-size:clamp(42px,6.8vw,82px);max-width:none;width:100%;line-height:.98;margin:0 0 18px;letter-spacing:-1.5px}.intro{font:19px/1.6 Arial,sans-serif;max-width:650px}
+.demo{background:#fff;border:1px solid #ece9e3;border-radius:30px;padding:24px;box-shadow:0 18px 50px rgba(32,33,36,.07);transform:rotate(-1deg)}
+.demoTitle{font-size:18px;margin-bottom:18px}.race{display:grid;grid-template-columns:1fr auto;gap:9px 12px;align-items:center;font-family:Arial,sans-serif}
+.track{height:22px;background:#f1f3f4;border-radius:999px;overflow:hidden}.fill{height:100%;border-radius:999px}.you{background:var(--blue);width:68%}.money{background:var(--pink);width:70%}
+.big{font:800 24px Aharoni,Arial}.flip{margin-top:20px;background:var(--yellow);border-radius:18px;padding:16px;font:700 18px/1.45 Arial,sans-serif}
+.controls{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:38px 0 24px}.control{background:#fff;border:1px solid #ece9e3;border-radius:24px;padding:22px;min-height:180px;box-shadow:0 10px 30px rgba(32,33,36,.04)}
+.num{font-size:15px;font-family:Arial,sans-serif;color:var(--muted)}.value{font-size:40px;margin:8px 0 15px;font-weight:800}
+input[type=range]{width:100%;height:14px;appearance:none;background:linear-gradient(to left,#e7e9ec,#e7e9ec);border-radius:99px;outline:none}
+input[type=range]::-webkit-slider-thumb{appearance:none;width:20px;height:20px;border-radius:50%;background:var(--ink);border:4px solid white;box-shadow:0 2px 12px #999;cursor:pointer}
+.chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:20px;}.chip{border:0;border-radius:99px;padding:9px 13px;background:#f1f3f4;font:700 14px Arial;cursor:pointer}.chip.on{background:var(--ink);color:#fff}
+.result{background:var(--ink);color:#fff;border-radius:34px;padding:30px;position:relative;overflow:hidden}.result:before{display:none}
+.resultTop{display:grid;grid-template-columns:1fr 1fr;gap:24px}.now{font:17px Arial,sans-serif;color:#d9dadd}.now strong{display:block;color:#fff;font:800 clamp(35px,5vw,66px) Aharoni,Arial;margin-top:8px}
+.monthlyRace{background:#303134;border-radius:24px;padding:22px}.versus{display:flex;align-items:flex-end;gap:12px;direction:rtl}.person{flex:1}.person span{font:14px Arial;color:#c9cacc}.person strong{display:block;font-size:31px;margin-top:5px}.vs{font:700 15px Arial;color:#9aa0a6;padding-bottom:7px}
+.meter{margin-top:26px;position:relative;padding-top:42px}
+.line{height:18px;background:#4b4c4f;border-radius:99px;position:relative;direction:rtl}
+.progress{display:block;height:100%;background:#b52f68;border-radius:99px;transition:width .35s ease;margin-right:0;margin-left:auto}
+.marker{position:absolute;top:0;transform:translateX(50%);text-align:center;font:13px Arial;color:#fff;pointer-events:none;transition:right .35s ease;z-index:2;min-width:150px;white-space:nowrap}
+.marker:after{content:"";display:block;width:20px;height:20px;border-radius:50%;background:#b52f68;border:4px solid #fff;box-sizing:border-box;margin:7px auto 0;box-shadow:0 2px 8px rgba(0,0,0,.28)}
+.axisLabels{display:flex;justify-content:space-between;margin-top:8px;font:12px Arial;color:#b9bdc2}
+.insight{margin-top:24px;background:#fff;color:var(--ink);border-radius:22px;padding:18px 20px;font:18px/1.55 Arial,sans-serif}.insight b{font-family:Aharoni,Arial;font-size:22px}
+.foot{font:16px/1.65 Arial;color:var(--muted);max-width:1260px;margin:20px auto 0;text-align:center}
+@media(max-width:780px){.wrap{padding:22px 14px 40px}.hero,.resultTop{grid-template-columns:1fr}.controls{grid-template-columns:1fr}.control{min-height:auto}h1{font-size:48px}.demo{transform:none}.result{padding:20px}.versus{gap:6px}.person strong{font-size:25px}}
+
+.introBlock{max-width:none;width:100%;margin:22px 0 8px;font-family:Arial,sans-serif}
+.introBlock h2{font:800 24px/1.3 Aharoni,"Arial Hebrew",Arial,sans-serif;margin:0 0 14px}
+.introBlock p{font:17px/1.7 Arial,sans-serif;margin:0 0 12px}
+.micro{font:14px/1.45 Arial,sans-serif;color:#666;margin-top:5px}
+a[href^="tel"],a[x-apple-data-detectors]{color:inherit!important;text-decoration:none!important}
+
+
+.bigTrack{position:relative}
+
+@media(max-width:700px){
+  input[type=range]{touch-action:pan-x;height:34px}
+  input[type=range]::-webkit-slider-thumb{width:20px;height:20px}
+  .introBlock h2{font-size:21px}
+  .introBlock p{font-size:16px}
+}
+
+.value,.big,.amount,.years,.rate,.chip,button{color:inherit;-webkit-text-fill-color:currentColor}
+input[type=range]{touch-action:pan-x}
+.aiDisclaimer{font:14px/1.65 Arial,sans-serif;color:#666;margin:10px 8px 0;max-width:1100px}
+.calcNote{direction:rtl;text-align:right;
+  margin:18px 8px 0;
+  padding:15px 18px;
+  border:1px solid rgba(181,47,104,.55);
+  background:rgba(181,47,104,.045);
+  border-radius:14px;
+  font:14px/1.65 Arial,sans-serif;
+  color:#555;
+}
+</style></head>
+<body><main class="wrap">
+<div class="eyebrow">המעבדה לחקר הכסף · משחקי מספרים</div>
+<section class="hero">
+<div class="heroCopy"><h1>מתי הכסף מתחיל לעשות יותר ממה שאני מפקידה?</h1>
+<div class="introBlock">
+<h2>המשמעות של הקלישאה "הכסף עובד בשבילי", מה זה אומר בעצם?</h2>
+<p>במשחק הכסף שלפנייך את יכולה לדמות תרחישים אמיתיים לחלוטין. המספרים כאן הם לא דמיוניים. לא הלכתי על תשואות מטורפות כמו שהיו בשנים האחרונות, וגם לא על סכומי הפקדה שלא כל אחת יכולה להרשות לעצמה.</p>
+<p>התוצאות שתראי מושפעות משלושה פרמטרים: סכום השקעה חודשי, אורך זמן, כלומר לא להישבר ולתת לכסף זמן, ואחוז תשואה ממוצע. תתחילי לשחק עם המספרים כדי למצוא את הנקודה שבה זה מתהפך, הנקודה שבה הכסף שלך באמת מתחיל לעבוד בשבילך. בשנים הראשונות אלה יכולים להיראות כמו סכומים זניחים יחסית, בדיוק השלב שבו קל להגיד לעצמנו "זהו? זה כל הסיפור?" ולחתוך לפני שהאפקט נהיה משמעותי.</p>
+<p>אז מה זה אומר בפועל שהכסף עובד בשבילי? שהוא מייצר יותר כסף ממה שאני מפקידה. כלומר, הכסף שכבר צברת ממשיך לייצר תשואה וכסף נוסף מעצמו. למרות שזה נשמע דמיוני, זה מנגנון אמיתי של צבירת הון לאורך זמן.</p>
+</div></div>
+</section>
+
+<section class="controls">
+<div class="control"><div class="num">01 · כמה אני מפקידה בחודש?</div><div class="value" id="amountV">500 ₪</div><input id="amount" type="range" min="100" max="5000" step="100" value="500"><div class="chips"><button class="chip" data-a="300">300</button><button class="chip on" data-a="500">500</button><button class="chip" data-a="1000">1,000</button><button class="chip" data-a="1500">1,500</button><button class="chip" data-a="2000">2,000</button></div></div>
+<div class="control"><div class="num">02 · כמה זמן אני נותנת לזה?</div><div class="value" id="timeV">3 שנים</div><input id="time" type="range" min="6" max="360" step="6" value="36"><div class="chips"><button class="chip" data-m="12">1</button><button class="chip on" data-m="36">3</button><button class="chip" data-m="60">5</button><button class="chip" data-m="96">8</button><button class="chip" data-m="120">10</button></div></div>
+<div class="control"><div class="num">03 · מה התשואה השנתית הממוצעת?</div><div class="value" id="rateV">8%</div><div class="chips" style="margin-top:28px"><button class="chip" data-r="5">5%</button><button class="chip on" data-r="8">8%</button><button class="chip" data-r="10">10%</button><button class="chip" data-r="15">15%</button><button class="chip" data-r="20">20%</button></div><div class="num" style="margin-top:18px">תרחיש חישוב, לא תחזית.</div></div>
+</section>
+
+<section class="result">
+<div class="resultTop">
+<div><div class="now">אחרי <span id="periodText">3 שנים</span><strong id="total">0 ₪</strong></div><div class="now" style="margin-top:12px">מתוכם אני הפקדתי <b id="contrib">0 ₪</b> · הכסף הוסיף <b id="gain">0 ₪</b></div></div>
+<div class="monthlyRace"><div class="versus"><div class="person"><span>אני מוסיפה בחודש</span><strong id="myMonth">500 ₪</strong></div><div class="vs"></div><div class="person"><span>הכסף שכבר הצטבר מייצר בחודש*</span><strong id="moneyMonth">0 ₪</strong></div></div></div>
+</div>
+<div class="meter"><div class="marker" id="marker">כאן זה מתהפך<br><b id="flipWhen"></b></div><div class="line"><div class="progress" id="progress"></div></div><div class="axisLabels"><span>0</span><span id="axisEnd">3 שנים</span></div></div>
+<div class="insight" id="insight"></div>
+</section><div class="calcNote"><b>הערה על החישוב:</b> המספרים מבוססים על סכום ההפקדה, הזמן והתשואה שבחרת וממחישים את העיקרון ואת סדרי הגודל. התשואה בפועל משתנה ויכולה להיות גם שלילית, והחישוב אינו כולל מס, עמלות או שינויי מטבע. נעזרתי ב-AI בבניית החישובים ולכן ייתכנו סטיות מסוימות.</div>
+
+</main>
+<script>
+const $=id=>document.getElementById(id), fmt=n=>Math.round(n).toLocaleString("he-IL")+" ₪";
+function monthlyRate(a){return Math.pow(1+a/100,1/12)-1}
+function fv(p,n,a){let r=monthlyRate(a);return p*((Math.pow(1+r,n)-1)/r)}
+function flipMonth(p,a){let r=monthlyRate(a);for(let n=1;n<=1200;n++){if(fv(p,n,a)*r>=p)return n}return 1200}
+function period(m){if(m<12)return m+" חודשים";if(m%12===0)return (m/12===1?"שנה":m/12+" שנים");return Math.floor(m/12)+" שנים ו־"+m%12+" חודשים"}
+function draw(){
+ let p=+$("amount").value,m=+$("time").value,a=+document.querySelector("[data-r].on").dataset.r;
+ let total=fv(p,m,a),con=p*m,g=Math.max(0,total-con),mm=total*monthlyRate(a),fm=flipMonth(p,a);
+ $("amountV").textContent=fmt(p); $("timeV").textContent=period(m); $("rateV").textContent=a+"%"; $("periodText").textContent=period(m);
+ $("total").textContent=fmt(total); $("contrib").textContent=fmt(con); $("gain").textContent=fmt(g); $("myMonth").textContent=fmt(p); $("moneyMonth").textContent=fmt(mm); $("flipWhen").textContent=period(fm);
+ const flipInside = fm <= m;
+ const pct = flipInside ? 100 : Math.min(100,(m/fm)*100);
+ $("progress").style.width=pct+"%";
+ if(flipInside){
+   // The timeline is RTL: 0 is on the right and the selected horizon is on the left.
+   // Therefore elapsed time maps directly to CSS `right`: 0% = now, 100% = horizon.
+   const markerPct=Math.min(98,Math.max(2,(fm/Math.max(1,m))*100));
+   $("marker").style.display="block";
+   $("marker").style.right=markerPct+"%";
+ }else{
+   $("marker").style.display="none";
+ }
+ $("axisEnd").textContent=m<12?m+" חודשים":(m%12===0?(m/12)+" שנים":Math.floor(m/12)+" שנים ו-"+(m%12)+" חודשים");
+ if(m<fm){let left=fm-m;$("insight").innerHTML=`בתרחיש הזה הכסף עדיין מוסיף פחות ממך בכל חודש. כאן זה מתהפך מגיעה בעוד בערך <b>${period(left)}</b>.`;}
+ else{$("insight").innerHTML=`<b>כאן זה כבר התהפך.</b> את מפקידה ${fmt(p)} בחודש, והכסף בתרחיש הזה מוסיף עכשיו בערך ${fmt(mm)} בחודש.`}
+}
+$("amount").oninput=draw;$("time").oninput=draw;
+document.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{document.querySelectorAll("[data-a]").forEach(x=>x.classList.remove("on"));b.classList.add("on");$("amount").value=b.dataset.a;draw()});
+document.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{document.querySelectorAll("[data-m]").forEach(x=>x.classList.remove("on"));b.classList.add("on");$("time").value=b.dataset.m;draw()});
+document.querySelectorAll("[data-r]").forEach(b=>b.onclick=()=>{document.querySelectorAll("[data-r]").forEach(x=>x.classList.remove("on"));b.classList.add("on");draw()});
+draw();
+
+
+</script>
+
+</body></html>
+<style>h1{max-width:none!important;width:100%;}.introBlock,.intro{width:100%;}</style>
+
+<style>
+.heroCopy{width:70%;margin-right:0;margin-left:auto}
+.introBlock{width:100%;max-width:none}
+@media(max-width:700px){.heroCopy{width:100%}}
+</style>
+
+<style>
+.heroCopy,.introBlock,.calcNote,.result .now,.result .summary{text-align:right;direction:rtl}
+</style>
+<style>.calcNote{direction:rtl!important;text-align:right!important}</style>
