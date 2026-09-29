@@ -140,6 +140,9 @@ function bind(){document.querySelectorAll('.choice,.scale-btn').forEach(b=>b.onc
 function restoreSelections(){document.querySelectorAll('.choice,.scale-btn').forEach(b=>{const v=data[b.dataset.name];if(Array.isArray(v)?v.includes(b.dataset.val):String(v)===b.dataset.val)b.classList.add('selected')})}
 async function submitReport(){
  const err=q('#submiterr');
+ const btn=event?.currentTarget || q('#card .btn:not(.secondary)');
+ if(btn?.disabled) return;
+ if(btn){ btn.disabled=true; btn.textContent='שולחת...'; }
  err.textContent='';
  const submissionId='R2-'+Date.now()+'-'+Math.random().toString(36).slice(2,8);
  const compactIdeas=[1,2,3].map(n=>`${n}. ${data['idea'+n]} | מקור: ${data['idea'+n+'_source']} | למה: ${data['idea'+n+'_why']}`).join('\n');
@@ -169,6 +172,7 @@ async function submitReport(){
    q('#card').innerHTML=`<div class="success"><h1>הדוח נשלח ✓</h1><p>תודה. הדוח שלך נשלח למעבדה.</p><p class="tiny">מזהה שליחה: ${submissionId}</p></div>`;
  }catch(e){
    err.textContent='השליחה לא הצליחה. נסי שוב.';
+   if(btn){ btn.disabled=false; btn.textContent='שליחה'; }
  }
 }
 
